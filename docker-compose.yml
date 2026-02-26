@@ -1,0 +1,9 @@
+services:
+  xcode-intelligence-proxy:
+    build: .
+    container_name: xcode-intelligence-proxy
+    ports:
+      - "5588:5588"
+    env_file:
+      - .env
+    restart: unless-stopped
