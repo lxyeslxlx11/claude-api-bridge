@@ -6,6 +6,9 @@
 适用于：
 - 让 Xcode / 其他 Anthropic 客户端接入任意 OpenAI-compatible LLM 后端
 - 在同一个代理里按 `model` 做多后端路由（可选）
+- xcode配置http://localhost:5588，其他随便填写即可
+
+
 
 ## Features
 
