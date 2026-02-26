@@ -1,6 +1,7 @@
 # Xcode Intelligence Proxy
 
 把 **Xcode Intelligence** 发出的 **Anthropic Messages API** 请求转发到 **OpenAI-compatible** 后端，并将响应转换回 Anthropic 协议返回。
+另外也支持 Kimi、minimax、glm
 
 适用于：
 - 让 Xcode / 其他 Anthropic 客户端接入任意 OpenAI-compatible LLM 后端
