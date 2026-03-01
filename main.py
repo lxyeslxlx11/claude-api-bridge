@@ -95,8 +95,6 @@ async def health_check():
 
 # Xcode 需要拿到 Anthropic 官方格式的模型列表才能正常初始化
 # 注意：这里返回的是“给客户端展示/选择的模型列表”。
-# 本项目支持的部分后端/路由能力（例如 kimi-code、某些企业内网后端）
-# 可能不会在此列表中暴露，详见 README。
 _AVAILABLE_MODELS = [
     {
         "id": "openai-default",
@@ -107,6 +105,12 @@ _AVAILABLE_MODELS = [
     {
         "id": "kimi-2.5",
         "display_name": "Kimi 2.5",
+        "created_at": "2025-01-01T00:00:00Z",
+        "type": "model",
+    },
+    {
+        "id": "kimi-code",
+        "display_name": "Kimi Code",
         "created_at": "2025-01-01T00:00:00Z",
         "type": "model",
     },

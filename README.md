@@ -28,11 +28,7 @@
 
 `GET /v1/models` 返回的是 **给客户端展示/选择的模型列表**。
 
-当前行为：
-- **Kimi Code**：当前 **不会** 在 `GET /v1/models` 中返回（但代码层面仍保留 `model=kimi-code` 的路由能力）。
-- **默认后端（OPENAI_API_URL / OPENAI_API_KEY / BACKEND_MODEL）**：通过 `openai-default` 在 `GET /v1/models` 中暴露为一个可选项。
-
-如需暴露/隐藏更多模型，请按需修改 `main.py` 的 `_AVAILABLE_MODELS`。
+当前暴露的模型包括：`openai-default`、`kimi-2.5`、`kimi-code`、`minimax-2.5`、`glm-4.7`。如需暴露/隐藏更多模型，请修改 `main.py` 的 `_AVAILABLE_MODELS`。
 
 ## Configuration
 
@@ -52,6 +48,8 @@ cp .env.example .env
 
 - Moonshot（Xcode 里可用 `model=kimi-2.5` 触发路由）
   - `MOONSHOT_BASE_URL` / `MOONSHOT_API_KEY` / `MOONSHOT_MODEL`
+- Kimi Code（Xcode 里可用 `model=kimi-code` 触发路由）
+  - `KIMI_CODE_BASE_URL` / `KIMI_CODE_API_KEY` / `KIMI_CODE_MODEL`
 - MiniMax（`model=minimax-2.5`）
   - `MINIMAX_BASE_URL` / `MINIMAX_API_KEY` / `MINIMAX_MODEL`
 - GLM / 智谱（`model` 以 `glm` 开头，例如 `GLM-4.7` / `glm-5`）
